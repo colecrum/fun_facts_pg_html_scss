@@ -23,10 +23,34 @@ body {
   text-align: center;
 }
 
+#mobile-sub {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  display: none;
+}
+
 .spacer {
   height: 50px;
 }
 
+@media screen and (max-width: 600px) {
+  #mobile-sub {
+    display: block;
+  }
+  #title-sub {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  #mobile-sub {
+    display: block;
+  }
+  #title-sub {
+    display: none;
+  }
+}
 
 /* CARDS ---------------------------------------------*/
 /* Card animation credit - smashtheshell - https://codepen.io/smashtheshell/pen/XmmzVq */
@@ -52,7 +76,6 @@ body {
   -moz-transform-style:preserve-3d;
   -webkit-transform-style:preserve-3d;
   transform-style:preserve-3d;
-
   transition:all .4s ease;
  }
 .card-front, .card-back{
@@ -104,6 +127,26 @@ body {
   height: 150px;
 }
 
+@media screen and (max-width: 600px) {
+  .align{
+  height: auto;
+}
+  .card-vertical, .card-horizontal{
+    margin: 20px;
+ }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .align{
+  height: auto;
+}
+  .card-vertical, .card-horizontal{
+    margin: 20px;
+    height: 300px;
+    width: 300px;
+ }
+}
+
 /* SIGN-OFF --------------------------------------------*/
 
 /*designed by & contact*/
@@ -116,16 +159,30 @@ body {
 
 .contact-links {
   height: auto;
-  width: 100%;
+  width: 25%;
+  display: inline-block;
+  padding: 20px;
+}
+
+.link-cont {
+  float: left;
+  width: 25%;
 }
 
 .contact-img {
   height: 75px;
   width: 75px;
-  padding: 25px;
 }
 
 #git-logo {
   height: 75px;
-  width: 125px;
+  width: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-links {width: 100%;}
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .contact-links {width: 100%;}
 }
